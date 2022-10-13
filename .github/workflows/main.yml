@@ -1,15 +1,8 @@
 name: Checking Code Quality
-
-on:
-  push:
-    branches-ignore:
-      - main
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [main]
+on: ["push", "pull_request"] ## run on push and pulls
 jobs:
   eslint:
-    name: Run eslint scanning
+    name: Run Code Quality Static Checks ## the name of our job
     runs-on: ubuntu-latest
     permissions:
       contents: read
